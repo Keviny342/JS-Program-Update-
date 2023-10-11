@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        .form input[type = "number"]{
+           width: 200 px;
+        }
+        body{
+            width: 50%;
+            max-width: 800px;
+            min-width: 400px;
+            margin: 0 auto;
+        }
+        html{
+            font-family: sans-serif;
+        }
+        .lastResult{
+            color: white;
+            padding: 3px;
+        }
+    </style>
+    <script src="numChange.js" async></script>
+    <script src="gameFunction.js" async></script>
+</head>
+<body>
+    <a href = "index.html" title = "home" target = ""> Return </a>
+    <!--Title-->
+    <h1 align = "center"><span style = "color:red">Hot</span> &amp; <span style = "color:aqua">Cold</span> #s</h1>
+
+    <p>
+        Let's begin! I have selected a random number between 1 and 100. See if you can guess my number in 10 turns.
+    </p>
+
+</br>
+
+    <div class = "form">
+        <div class = "numbers">
+            <p>
+                Select the number to change your value by:
+            </p>
+            <button onclick = "update1()">1</button>
+            <button onclick = "update5()">5</button>
+            <button onclick = "update10()">10</button>
+            <button onclick = "update25()">25</button>
+        </div>
+
+        <p>Change value by: </p>
+        <p id = "change"> 0</p>
+        <img onclick = "add()" height = "40px" width = "40px" src="http://knttraining.co.uk/wp-content/uploads/2018/11/how-to-add-a-png-to-a-photo.png">
+        <img onclick = "subtract()" height = "40px" width = "40px" src = "https://thenounproject.com/api/private/icons/5519957/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0">
+        <p>Current Value: </p>
+        <p id = "num"> 0</p>
+        <label for = "guessField"> Enter a guess: </label>
+        <input type = "number" required id = "guessField" class = "guessField">
+        <input type = "submit" value = "Submit guess" class = "guessSubmit">
+    </div>
+
+    <div class = "resultParas">
+        <p class = "guesses"></p>
+        <p class = "lastResult"></p>
+        <p class = "lowOrHi"></p>
+    </div>
+</body>
+</html>
